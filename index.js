@@ -11,7 +11,7 @@ const membershipRouter = require('./routes/membershipRoute');
 const app = express();
 
 const corsOptions = {
-  origin: ['http://localhost:5173', 'https://your-frontend-domain.vercel.app'],
+  origin: ['http://localhost:5173', 'https://slot-booking-iu1o.vercel.app'],
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization'],
   credentials: true
