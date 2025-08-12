@@ -14,6 +14,8 @@ const bookingSchema = new mongoose.Schema({
   price: { type: Number, required: true },
   overs: { type: Number, required: true },
   status: { type: String, required: true },
+  activationTime: {type: Date, default: null},
+  expiryTime: {type: Date, default: null}
 });
 
 const Booking = mongoose.model('Booking', bookingSchema);
