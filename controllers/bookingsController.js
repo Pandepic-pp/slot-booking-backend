@@ -13,11 +13,15 @@ async function getBookingCount(centerId, date, slot) {
   const endOfDay = new Date(date);
   endOfDay.setHours(23, 59, 59, 999);
 
-  return await Booking.countDocuments({
-    center: centerId.toString(),
+  const count = await Booking.countDocuments({
+    center: centerId,
     forDate: { $gte: startOfDay, $lte: endOfDay },
-    forTime: slot
+    forTime: `${slot}:00`
   });
+
+  console.log(`center: ${centerId}, date: ${date}, slot: ${slot}, count: ${count}`);
+
+  return count;
 }
 
 async function getAvailableSlots(req, res) {
