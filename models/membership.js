@@ -4,6 +4,7 @@ const membershipSchema = new mongoose.Schema({
   phone: { type: String, required: true },
   package_id: { type: Number, required: true},
   oversLeft: { type: Number, required: true },
+  createdAt: {type: Date, default: Date.now },
   validity: {type: Date, required: true },
   price: { type: Number, required: true },
 });
