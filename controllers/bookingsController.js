@@ -151,7 +151,7 @@ async function updateBooking(req, res) {
       return res.json({ message: `Booking ${action}d successfully`, booking: updatedBooking });
     } 
     
-    if (action === 'cancel') {
+    if (action === 'cancelled') {
       newStatus = 'cancelled';
     } else if (action === 'completed') {
       newStatus = 'completed';
