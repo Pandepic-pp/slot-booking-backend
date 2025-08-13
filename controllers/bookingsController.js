@@ -19,7 +19,7 @@ async function getBookingCount(centerId, date, slot) {
     forTime: `${slot}:00`
   });
 
-  console.log(`center: ${centerId}, date: ${date}, slot: ${slot}, count: ${count}`);
+  //console.log(`center: ${centerId}, date: ${date}, slot: ${slot}, count: ${count}`);
 
   return count;
 }
