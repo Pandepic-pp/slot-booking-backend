@@ -94,10 +94,10 @@ async function addBooking(req, res) {
 
       if(bookingType === 'Package Buy' && isPackageSaved === false) {
         const p = packages.find((pack) => pack.id === packageId);
-        const validity = new Date();
-        validity.setMonth(validity.getMonth() + p.validity);
+        // const validity = new Date();
+        // validity.setMonth(validity.getMonth() + p.validity);
         const newMembership = new Membership({
-          phone: bookedBy, package_id: packageId, validity, totalOvers: p.package, oversLeft: p.package, price: p.price
+          phone: bookedBy, package_id: packageId, totalOvers: p.package, oversLeft: p.package, price: p.price
         });
         await newMembership.save();
         isPackageSaved = true;
