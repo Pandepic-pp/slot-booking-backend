@@ -6,7 +6,7 @@ const membershipSchema = new mongoose.Schema({
   totalOvers: {type: Number, required: true},
   oversLeft: { type: Number, required: true },
   createdAt: {type: Date, default: Date.now },
-  validity: {type: Date, required: true },
+  validity: {type: Date},
   price: { type: Number, required: true },
 });
 
