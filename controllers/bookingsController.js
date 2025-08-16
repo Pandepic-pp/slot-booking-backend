@@ -97,7 +97,7 @@ async function addBooking(req, res) {
         const validity = new Date();
         validity.setMonth(validity.getMonth() + p.validity);
         const newMembership = new Membership({
-          phone: bookedBy, package_id: packageId, validity, oversLeft: p.package, price: p.price
+          phone: bookedBy, package_id: packageId, validity, totalOvers: p.package, oversLeft: p.package, price: p.price
         });
         await newMembership.save();
         isPackageSaved = true;
