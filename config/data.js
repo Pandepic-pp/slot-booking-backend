@@ -13,9 +13,11 @@ const centers = [
 
 const packages = [
   { id: 1, package: 150, validity: 1, price: 4000 },
-  { id: 2, package: 300, validity: 3, price: 6000 },
+  { id: 2, package: 400, validity: 3, price: 6000 },
   { id: 3, package: 1000, validity: 6, price: 10000 },
-  { id: 4, package: 700, validity: 12, price: 11000 }
+  { id: 4, package: 700, validity: 12, price: 11000 },
+  { id: 5, package: Number.POSITIVE_INFINITY, validity: 3, price: 20000 },
+  { id: 6, package: Number.POSITIVE_INFINITY, validity: 0.03, price: 2000}
 ];
 
 module.exports = { user, centers, packages };
