@@ -13,6 +13,7 @@ async function addMembership(req, res) {
         const membership = new Membership({
             package_id: membershipId,
             phone: phone,
+            totalOvers: pkg.package,
             oversLeft: pkg.package
         });
 
