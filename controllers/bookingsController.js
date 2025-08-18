@@ -6,6 +6,13 @@ const Membership = require('../models/membership');
 const Customer = require('../models/customer');
 const { packages } = require('../config/data');
 
+const centerIds = {
+  1: 110,
+  2: 93,
+  3: 57,
+  4: 10
+}
+
 async function getBookingCount(centerId, date, slot) {
   const startOfDay = new Date(date);
   startOfDay.setHours(0, 0, 0, 0);
@@ -97,7 +104,7 @@ async function addBooking(req, res) {
         // const validity = new Date();
         // validity.setMonth(validity.getMonth() + p.validity);
         const newMembership = new Membership({
-          phone: bookedBy, package_id: packageId, totalOvers: p.package, oversLeft: p.package, price: p.price
+          phone: bookedBy, package_id: packageId, totalOvers: p.package, oversLeft: p.package, price: p.price, status: 'Running', center: centerIds[center]
         });
         await newMembership.save();
         isPackageSaved = true;

@@ -37,7 +37,7 @@ async function getMemberships(req, res) {
 
         res.status(200).json(memberships);
     } catch (err) {
-        res.status(500).json({ message: err.message });
+        res.status(500).json({ message: 'Some error occured' + err.message });
     }
 }
 

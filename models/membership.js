@@ -7,6 +7,8 @@ const membershipSchema = new mongoose.Schema({
   oversLeft: { type: Number, required: true },
   createdAt: {type: Date, default: Date.now },
   validity: {type: Date},
+  status: {type: String, required: true},
+  center: {type: String, required: true},
   price: { type: Number, required: true },
 });
 
